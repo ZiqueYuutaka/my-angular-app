@@ -1,0 +1,53 @@
+<div class="container-fluid  dashboard-content">
+  <!-- ============================================================== -->
+  <!-- pageheader -->
+  <!-- ============================================================== -->
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="page-header">
+        <h2 class="pageheader-title">{{title}}</h2>
+        <p class="pageheader-text">This is a demo dashboard containing all outputs of all crops</p>
+        <div class="page-breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item" aria-current="page">
+                Dashboard
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- end pageheader -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Bootstrap test card -->
+  <!-- ============================================================== -->
+  <!-- SAMPLE CARD WITH BAR GRAPH -->
+  <!-- div class="col-12 col"--->
+  <div class="row">
+    <div style="width: 18rem; padding:15px;" *ngFor="let hexagrow of hexagrows;">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Hexagrow Unit {{hexagrow.id}}</h3>
+          <ul *ngFor="let panel of hexagrow.panels; let i = index;">
+            <li>
+              <div *ngIf="panel; else noCrops" class="card-text">Panel-{{i+1}}: {{panel}}</div>
+              <ng-template #noCrops>
+                <div class="card-text">Panel-{{i+1}}: No crops planted</div>
+              </ng-template>
+            </li>
+          </ul>
+          <p>
+            <a routerLink="/hexagrow/{{hexagrow.id}}" class="btn btn-primary">A Deeper Look</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- END Bootstrap test card -->
+  <!-- ============================================================== -->
+</div>

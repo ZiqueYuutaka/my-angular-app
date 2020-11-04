@@ -1,0 +1,86 @@
+<div class="container-fluid  dashboard-content">
+  <!-- ============================================================== -->
+  <!-- pageheader -->
+  <!-- ============================================================== -->
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="page-header">
+        <h2 class="pageheader-title">Hexagrow {{hexId}}</h2>
+        <p class="pageheader-text">This is a demo dashboard containing all outputs of all crops</p>
+        <div class="page-breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a routerLink="/">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                Hexagrow-{{hexId}}
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- end pageheader -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Bootstrap test card -->
+  <!-- ============================================================== -->
+  <!-- SAMPLE CARD WITH BAR GRAPH -->
+  <!-- div class="col-12 col"--->
+  <!-- Each row will display the selected crops and the cost/revenue levels -->
+  <!--<div class="row" *ngFor="let panel of panels;">
+    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="card">
+        <canvas id={{panel.id}} class="img-fluid mb-4"></canvas>
+        <div class="card-body">
+          <h3 class="card-title">Average Monthly Size of Romaine(cm)</h3>
+          <h3 class="card-title">Expected Harvest Date: September 2019</h3>
+          <p class="text-muted">Last updated 3 mins ago</p>
+          <p>
+            <a routerLink="panel/{{panel.id}}" class="btn btn-primary">A Deeper Look</a>
+          </p>
+        </div>
+      </div>
+    </div>-->
+<div class="row">
+  <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="card">
+      <div class="alert alert-danger" role="alert" *ngIf="humidError">
+        Value outside of acceptable range—check it out!
+      </div>
+      <canvas id="humidity-display" class="img-fluid mb-4"></canvas>
+      <div class="card-body">
+        <h3 class="card-title">Humidity Display</h3>
+        <!--<h3 class="card-title">Expected Harvest Date: September 2019</h3>-->
+        <p class="text-muted">Last updated 3 mins ago</p>
+        <!--<p>
+          <a routerLink="panel/{{panels[0].id}}" class="btn btn-primary">A Deeper Look</a>
+        </p>-->
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="card">
+      <div class="alert alert-danger" role="alert" *ngIf="tempError">
+        Value outside of expected range—check it out!
+      </div>
+      <canvas id="temp-display" class="img-fluid mb-4"></canvas>
+      <div class="card-body">
+        <h3 class="card-title">Temperature Display-Scale: {{temperatureScale}}</h3>
+        <!--<h3 class="card-title">Expected Harvest Date: October 2019</h3>-->
+        <p class="text-muted">Last updated 5 mins ago</p>
+        <!--<p>
+      <a routerLink="panel/{{panels[1].id}}" class="btn btn-primary">A Deeper Look</a>
+    </p>-->
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- ============================================================== -->
+    <!-- END Bootstrap test card -->
+    <!-- ============================================================== -->
+  </div>
+  <!--<script src="assets/ecoponic-js/hexagrow-js/hex1-panels-util.js"></script>-->
