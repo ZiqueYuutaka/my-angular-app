@@ -1,6 +1,6 @@
 # Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9. This is the front-end demo app to my-flask-app found here: https://github.com/ZiqueYuutaka/my-flask-app
 
 ## Development server
 
